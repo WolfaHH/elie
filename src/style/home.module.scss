@@ -1,16 +1,34 @@
 @import './variables';
 
-
 .main 
 {
 	font-family: 'Asgard Fit', 'arial';
 	background-color: $bg;
-	padding: 5rem;
 	width: 100%;
 	height:100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
+	color: $second-bg;
+
+	.jumbotron 
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+		.logo
+		{
+			margin-bottom: 2rem;
+			font-size: 3rem;
+			font-weight: 300;
+		}
+	
+	}
+
+
 
 }
