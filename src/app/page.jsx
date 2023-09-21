@@ -4,9 +4,21 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.jumbotron}>
-        <div className={styles.logo}><span>e</span>llie</div>
+        <div className={styles.pedale1}></div>
+        <div className={styles.pedale2}></div>
+        <div className={styles.logo}>
+          <span>e</span>llie
+        </div>
         <div className={styles.title}>
-          Bienvenue chez ellie, centre médical pluridisciplinaire de la femme
+          Bienvenue chez ellie,<br/> centre médical<br/>  pluridisciplinaire<br/>  de la femme<br/> 
+        </div>
+        <div className={styles.last}>
+          <div className={styles.text}>
+            Une équipe spécialisée et bienveillante de<br/> médecins gynécologues,
+            sages-femmes,<br/> ostéopathe, physiothérapeute, diététicienne et<br/>
+            psychologue vous propose des consultations <br/>et des soins de qualités
+            pour les femmes.
+          </div>
         </div>
       </div>
     </main>
