@@ -1,11 +1,17 @@
 import Image from "next/image";
 import styles from "@/style/home.module.scss";
+import { useClient } from 'next/client';
+
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.jumbotron}>
-        <div className={styles.pedale1}></div>
-        <div className={styles.pedale2}></div>
+        <div className={styles.pedale1}>
+          <Image src="/petale1.webp" alt="pedale1" width={300} height={300} />
+        </div>
+        <div className={styles.pedale2}>
+          <Image src="/pedale2.svg" alt="pedale2" width={300} height={300} />
+        </div>
         <div className={styles.logo}>
           <span>e</span>llie
         </div>
