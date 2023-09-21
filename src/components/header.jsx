@@ -38,8 +38,8 @@ const Header = () => {
           <select className={styles.elt}>
             
             <option value="fr">FR</option>
-            <option value="de">DE</option>
             <option value="en">EN</option>
+            <option value="de">DE</option>
           </select>
 
          
