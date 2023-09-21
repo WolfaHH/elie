@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="w-1/4 mx-auto mt-2 px-10">
         <h4 className='text-lg font-light mb-2'>Prendre rendez-vous</h4>
-        <button className='bg-yellow-button text-white py-2 my-2 px-4 rounded-full hover:bg-blue-600 text-xs'>Réserver en ligne</button><br></br>
+        <button className='bg-yellow-button text-white py-2 my-2 px-4 rounded-full hover:bg-blue-600 text-xs cursor-pointer'>Réserver en ligne</button><br></br>
         <span className='font-extralight text-xs'>Par téléphone dès Mars 2024</span>
       </div>
       <div className="container text-center w-1/4 mx-auto mt-2 px-10">
@@ -18,7 +18,7 @@ const Footer = () => {
         <span className='font-extralight text-xs'>- Bus n°1, 20 et 21 ; arrêt Blécherette</span><br></br>
         <span className='font-extralight text-xs'>- Axe autoroutier, sortie Blécherette;</span><br></br>
         <span className='font-extralight text-xs'>parking des Plaines du Loup</span><br></br>
-        <button className='bg-green-button text-white py-2 my-2 px-4 rounded-full hover:bg-blue-600 text-xs'>Aller sur Google</button>
+        <button className='cursor-pointer bg-green-button text-white py-2 my-2 px-4 rounded-full hover:bg-blue-600 text-xs'>Aller sur Google</button>
       </div>
       < div className="container text-center w-1/4 mx-auto mt-2 px-10">
         <h4 className='text-lg font-light mb-2'>Nous joindre</h4>
