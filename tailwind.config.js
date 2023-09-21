@@ -14,9 +14,9 @@ module.exports = {
       },
       colors: {
         'yellow-button': '#cb8e37',
-        'yellow-button-hover': '#b37c32',
+        'yellow-button-hover': '#f2b765',
         'green-button': '#c3dbce',
-        'green-button-hover': '#b37c32',
+        'green-button-hover': '#d0eddd',
       },
     },
   },
