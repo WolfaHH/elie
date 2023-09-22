@@ -1,91 +1,61 @@
-import Image from 'next/image'
-import styles from '@/style/home.module.scss'
+import React, { useState } from 'react';
+import './ContactForm.css'; // Assurez-vous d'avoir un fichier CSS pour le style glass effect
 
-const ContactPage = () => {
-  // Définissez des états pour les champs du formulaire
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  // Gérez le changement des champs du formulaire
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  // Gérez la soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour envoyer les données à un serveur
-    console.log('Nom:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    // Vous pouvez ajouter ici la logique pour envoyer le formulaire (ex : API call)
+    console.log(formData);
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-semibold mb-4">Contactez-nous</h1>
-      <form onSubmit={handleSubmit} className="max-w-md">
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700 font-semibold">
-            Nom :
-          </label>
+    <div className="contact-form-container">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h2>Contactez-nous</h2>
+        <div className="input-container">
           <input
             type="text"
-            id="name"
             name="name"
-            value={name}
-            onChange={handleNameChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
+            placeholder="Nom"
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 font-semibold">
-            Email :
-          </label>
+        <div className="input-container">
           <input
             type="email"
-            id="email"
             name="email"
-            value={email}
-            onChange={handleEmailChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
+            placeholder="Adresse e-mail"
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-gray-700 font-semibold">
-            Message :
-          </label>
+        <div className="input-container">
           <textarea
-            id="message"
             name="message"
-            value={message}
-            onChange={handleMessageChange}
-            rows="4"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            required
+            placeholder="Votre message"
+            value={formData.message}
+            onChange={handleChange}
           ></textarea>
         </div>
-        <div className="text-center">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-blue-600 focus:outline-none"
-          >
-            Envoyer
-          </button>
-        </div>
+        <button type="submit">Envoyer</button>
       </form>
     </div>
   );
-};
+}
 
-export default ContactPage;
+export default ContactForm;
